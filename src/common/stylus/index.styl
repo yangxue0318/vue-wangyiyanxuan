@@ -1,0 +1,720 @@
+@import "mixins.styl"
+//html,body{
+//  overflow hidden
+//}
+#app
+  width 100%
+  height 100%
+  //background pink
+  #nav
+    height px2rem(148px)
+    .as
+      position fixed
+      z-index 99
+      #nav-header
+        height px2rem(88px)
+        background #fff
+        display flex
+        align-items center
+        padding px2rem(10px)
+        box-sizing border-box
+        vertical-align center
+        margin-bottom px2rem(-2px)
+        .logo
+          width px2rem(138px)
+          padding-top px2rem(10px)
+          box-sizing border-box
+          margin-right px2rem(20px)
+          .logopicture
+            width px2rem(160px)
+            img
+              width px2rem(140px)
+        .search
+          width px2rem(442px)
+          height px2rem(56px)
+          padding px2rem(0) px2rem(4px)
+          position relative
+          left px2rem(-5px)
+          .iconfont
+            position absolute
+            left px2rem(8px)
+            top px2rem(2px)
+            font-size px2rem(60px)
+          .sousuo
+            width px2rem(442px)
+            height px2rem(56px)
+            border-radius px2rem(12px)
+            font-size px2rem(27px)
+            box-sizing border-box
+            padding-left px2rem(62px)
+            background #ccc
+        .login
+          width  px2rem(100px)
+          height px2rem(40px)
+          line-height px2rem(50px)
+          border px2rem(1px) solid red
+          border-radius px2rem(10px)
+          display flex
+          align-items center
+          margin-left px2rem(5px)
+          margin-top px2rem(15px)
+          a
+            padding 0 px2rem(20px)
+            display inline-block
+            font-size px2rem(28px)
+            height px2rem(40px)
+            color red
+            box-sizing border-box
+      #header-mask
+        width 100%
+        height px2rem(60px)
+        background white
+        overflow hidden
+        position relative
+        .mask
+          width 100%
+          display flex
+          li
+            flex-shrink 0
+            padding 0 px2rem(35px)
+            box-sizing border-box
+            a
+              font-size px2rem(30px)
+              line-height px2rem(60px)
+        .arrow
+          position absolute
+          right px2rem(125px)
+          top px2rem(0px)
+          width px2rem(70px)
+          height px2rem(60px)
+          display block
+          background white
+          .iconfont
+            font-size px2rem(42px)
+        .line
+          height px2rem(6px)
+          width px2rem(80px)
+          background red
+          position absolute
+          left px2rem(26px)
+          top px2rem(52px)
+
+
+  ////头部遮罩层
+  .swiper-container
+    width 100%
+    height px2rem(370px)
+    .swiper-pagination-bullet
+      width px2rem(40px)
+      height px2rem(4px)
+      background white
+  .grow
+    width 100%
+    height px2rem(72px)
+    display flex
+    background white
+    padding 0 px2rem(30px)
+    box-sizing border-box
+    align-items center
+    .growList
+      width px2rem(247px)
+      height px2rem(36px)
+      a
+        width px2rem(230px)
+        height px2rem(32px)
+        display inline-block
+        display flex
+        color black
+        .iconfont
+          font-size px2rem(32px)
+          color red
+        span
+          width px2rem(175px)
+          height px2rem(32px)
+          font-size px2rem(24px)
+          display inline-block
+          margin-left px2rem(8px)
+  .shop
+    width 100%
+    //height 100%
+    background #ccc
+    .goods
+      width 100%
+      height px2rem(370px)
+      background white
+      .goodsList
+        width 100%
+        height px2rem(370px)
+        display flex
+        flex-wrap wrap
+        .goods-item
+          width px2rem(110px)
+          height px2rem(156px)
+          margin px2rem(10px) px2rem(20px) px2rem(9px)
+          .goodss
+            width px2rem(110px)
+            height px2rem(156px)
+            display inline-block
+            img
+              width px2rem(110px)
+              height px2rem(110px)
+            span
+              font-size px2rem(24px)
+              margin px2rem(10px) 0 0
+              width px2rem(110px)
+              height px2rem(36px)
+              display inline-block
+              color #333
+
+    .nrepeople
+      width 100%
+      height px2rem(558px)
+      background white
+      padding 0 0 0 px2rem(30px)
+      box-sizing border-box
+      margin px2rem(20px) 0
+      .new-top
+        width 100%
+        height px2rem(90px)
+        padding 0 px2rem(30px)
+        background white
+        color #333
+        font-size px2rem(32px)
+        text-align center
+        line-height px2rem(90px)
+        box-sizing border-box
+      .new-bottom
+        width 100%
+        height px2rem(438px)
+        display flex
+        .new-bottom-left
+          width px2rem(343px)
+          height px2rem(434px)
+          margin 0 px2rem(4px) 0 0
+          background #F9E9CF
+          a
+            width px2rem(343px)
+            height px2rem(434px)
+            margin 0 px2rem(4px) 0 0
+            display inline-block
+            .new-bottom-left-top
+              width px2rem(342px)
+              height px2rem(78px)
+              padding px2rem(30px) 0 0 px2rem(30px)
+              font-size px2rem(32px)
+              box-sizing border-box
+            //background red
+            .new-bottom-left-bottom
+              width px2rem(258px)
+              height px2rem(257px)
+              margin px2rem(35px) auto
+        .new-bottom-right
+          width px2rem(343px)
+          height px2rem(438px)
+          //background #7e8c8d
+          .new-bottom-right-top
+            width px2rem(343px)
+            height px2rem(215px)
+            background  #FBE2D3
+            display flex
+            margin-bottom px2rem(5px)
+            .new-bottom-right-top-left
+              width px2rem(140px)
+              height px2rem(215px)
+              .fuli
+                width px2rem(180px)
+                height px2rem(48px)
+                font-size px2rem(32px)
+                padding-left px2rem(20px)
+                box-sizing border-box
+              .tejia
+                width px2rem(180px)
+                height px2rem(48px)
+                font-size px2rem(24px)
+                padding-left px2rem(20px)
+                box-sizing border-box
+            .new-bottom-right-top-right
+              width px2rem(200px)
+              height px2rem(200px)
+              position: relative
+              .circle
+                width px2rem(80px)
+                height px2rem(80px)
+                background orange
+                border-radius 50%
+                position relative
+                margin  px2rem(25px) px2rem(90px) 0
+                .xianprice
+                  font-size px2rem(22px)
+                  width px2rem(80px)
+                  height px2rem(15px)
+                  color white
+                .yuanprice
+                  font-size px2rem(20px)
+                  width px2rem(80px)
+                  position absolute
+                  left px2rem(4px)
+                  bottom px2rem(15px)
+                  color white
+              .socks
+                width px2rem(200px)
+                height px2rem(200px)
+                position absolute
+                left px2rem(10px)
+                top px2rem(15px)
+          .new-bottom-right-bottom
+            width px2rem(343px)
+            height px2rem(215px)
+            background #FFECC2
+            display flex
+            .new-bottom-right-top-left
+              width px2rem(140px)
+              height px2rem(215px)
+              .newpeople
+                width px2rem(310px)
+                height px2rem(48px)
+                font-size px2rem(35px)
+                padding-left px2rem(12px)
+                box-sizing border-box
+                display inline-block
+              .baoyou
+                width px2rem(310px)
+                height px2rem(48px)
+                font-size px2rem(24px)
+                padding-left px2rem(20px)
+                box-sizing border-box
+                color white
+                display inline-block
+              //background-color #cccccc
+            .new-bottom-right-top-right
+              width px2rem(190px)
+              height px2rem(215px)
+              position relative
+              .circle
+                width px2rem(80px)
+                height px2rem(80px)
+                background orange
+                border-radius 50%
+                position absolute
+                left px2rem(60px)
+                top px2rem(20px)
+                z-index 12
+                .xianprice
+                  font-size px2rem(22px)
+                  width px2rem(80px)
+                  height px2rem(15px)
+                  color white
+                .yuanprice
+                  font-size px2rem(20px)
+                  width px2rem(80px)
+                  position absolute
+                  left px2rem(4px)
+                  bottom px2rem(15px)
+                  color white
+              .tuoxie
+                width px2rem(200px)
+                height px2rem(200px)
+                position absolute
+                left px2rem(10px)
+                top px2rem(25px)
+    .pinpai
+      width 100%
+      height px2rem(654px)
+      background white
+      .pinpai-top
+        width 100%
+        height px2rem(100px)
+        padding 0 px2rem(30px)
+        box-sizing border-box
+        background white
+        .pinpai-top-left
+          width px2rem(224px)
+          height px2rem(99px)
+          background white
+          line-height px2rem(99px)
+          float left
+          span
+            width px2rem(224px)
+            height px2rem(42px)
+            display inline-block
+            color #333
+            font-size px2rem(32px)
+        .pinpai-top-right
+            width px2rem(77px)
+            height px2rem(99px)
+            //background #ffa500
+            float right
+            line-height px2rem(99px)
+            .more-a
+              width px2rem(77px)
+              height px2rem(99px)
+              position relative
+              .more
+                width px2rem(56px)
+                height px2rem(31px)
+                font-size px2rem(27px)
+                color #333
+              .iconfont
+                font-size px2rem(65px)
+                position absolute
+                right px2rem(-100px)
+                top px2rem(-95px)
+      .pinpai-bottom
+        width 100%
+        height px2rem(554px)
+        margin 0 0 px2rem(20px)
+        padding 0 px2rem(26px) px2rem(26px) px2rem(30px)
+        box-sizing border-box
+        background white
+        display flex
+        flex-wrap wrap
+        .pinpai-bottom-list
+          width px2rem(343px)
+          height px2rem(260px)
+          background url(https://yanxuan.nosdn.127.net/74e2ea8f81004d0a60f90fc8e4649058.png?imageView&thumbnail=343y260&enlarge=1)
+          margin 0 px2rem(4px) px2rem(4px) 0
+          &.two
+            background url(https://yanxuan.nosdn.127.net/c097be14110f769d58245cdad73e15c3.png?imageView&thumbnail=343y260&enlarge=1)
+          &.three
+            background url(https://yanxuan.nosdn.127.net/66a23d776f41cba70d00803a5231124b.png?imageView&thumbnail=343y260&enlarge=1)
+          &.four
+            background url(https://yanxuan.nosdn.127.net/c9e14b08576b6a5e2bc3ef46e0e05d08.png?imageView&thumbnail=343y260&enlarge=1)
+          a
+            width px2rem(343px)
+            height px2rem(260px)
+            text-align center
+            .zhizaoshang
+              width px2rem(343px)
+              height px2rem(95px)
+              padding px2rem(23px) 0 0
+              box-sizing border-box
+              h4
+                width px2rem(343px)
+                height px2rem(33px)
+                font-size px2rem(27px)
+                margin 0 0 px2rem(3px)
+                color #333
+                line-height px2rem(33px)
+              .pinpai-price
+                width px2rem(343px)
+                height px2rem(36px)
+                display flex
+                position relative
+                .price-total
+                  width px2rem(120px)
+                  height px2rem(27px)
+                  padding-left px2rem(45px)
+                  display flex
+                  .money
+                    width px2rem(33px)
+                    height px2rem(27px)
+                    font-size px2rem(24px)
+                  .yuanqi
+                    width px2rem(60px)
+                    height px2rem(27px)
+                    font-size px2rem(24px)
+                    //display flex
+                    display inline-block
+                .shang-new
+                  width px2rem(60px)
+                  height px2rem(27px)
+                  font-size px2rem(24px)
+                  display inline-block
+                  background #f9e9cf
+    .hot-bought
+      width 100%
+      height px2rem(710px)
+      background white
+      margin-top px2rem(10px)
+      .hot-top
+        width 100%
+        height px2rem(100px)
+        //background #f9e9cf
+        padding  0 px2rem(30px)
+        box-sizing border-box
+        .hot-top-left
+          width px2rem(160px)
+          height px2rem(99px)
+          //background #007aff
+          line-height px2rem(99px)
+        span
+          width px2rem(160px)
+          height px2rem(42px)
+          text-align center
+          font-size px2rem(32px)
+          display inline-block
+      .firat-a
+
+        .hot-bottom
+          width 100%
+          height px2rem(610px)
+          //background #cccccc
+          padding 0 px2rem(20px) px2rem(20px) px2rem(30px)
+          box-sizing border-box
+          .bottom-top
+            width 100%
+            height px2rem(200px)
+            //background green
+            display flex
+            .bottom-top-left
+              width px2rem(340px)
+              height px2rem(200px)
+              margin 0 px2rem(10px) px2rem(10px) 0
+              background #f9e9cf
+              display flex
+              .text
+                width px2rem(340px)
+                height px2rem(41px)
+                margin px2rem(66px) 0 0
+                padding 0 0 0 px2rem(24px)
+                //background yellow
+                span
+                  width px2rem(84px)
+                  height px2rem(41px)
+                  font-size px2rem(27px)
+                  display inline-block
+                .xiline
+                  width px2rem(60px)
+                  height px2rem(10px)
+                  background black
+
+            .bottom-top-right
+              width px2rem(340px)
+              height px2rem(200px)
+              margin 0 px2rem(10px) px2rem(10px) 0
+              background #EBEFF6
+              display flex
+              .text-two
+                width px2rem(340px)
+                height px2rem(41px)
+                margin px2rem(66px) 0 0
+                padding 0 0 0 px2rem(24px)
+                //background yellow
+                span
+                  width px2rem(84px)
+                  height px2rem(41px)
+                  font-size px2rem(27px)
+                  display inline-block
+                .xiline-two
+                  width px2rem(60px)
+                  height px2rem(10px)
+                  background black
+          .shop-Items
+            width 100%
+            height px2rem(360px)
+            background white
+            //background yellowgreen
+            .shoplist-items
+              width 100%
+              height px2rem(360px)
+              display flex
+              flex-wrap wrap
+              background white
+              margin-top px2rem(10px)
+              .listitems
+                width px2rem(165px)
+                height px2rem(180px)
+                background #F5F5F5
+                margin 0 px2rem(10px) px2rem(10px) 0
+                flex-direction column
+                display flex
+                align-items center
+                .jianjie
+                  width px2rem(165px)
+                  height px2rem(36px)
+                  //background green
+                  font-size px2rem(24px)
+                  margin px2rem(10px) 0 0
+                  color #333
+                  line-height px2rem(36px)
+                  text-align center
+
+                img
+                  width px2rem(120px)
+                  height px2rem(120px)
+    .people
+      width 100%
+      height px2rem(784px)
+      background white
+      margin 0 0 px2rem(20px)
+      padding 0 0 px2rem(30px)
+      box-sizing border-box
+      .pinpai-top
+        width 100%
+        height px2rem(100px)
+
+        box-sizing border-box
+        padding 0 px2rem(30px)
+        background white
+        .pinpai-top-left
+          width px2rem(224px)
+          height px2rem(99px)
+          background white
+          line-height px2rem(99px)
+          float left
+          span
+            width px2rem(224px)
+            height px2rem(42px)
+            display inline-block
+            color #333
+            font-size px2rem(32px)
+        .pinpai-top-right
+          width px2rem(77px)
+          height px2rem(99px)
+          //background #ffa500
+          float right
+          line-height px2rem(99px)
+          .more-a
+            width px2rem(77px)
+            height px2rem(99px)
+            position relative
+          .more
+            width px2rem(56px)
+            height px2rem(31px)
+            font-size px2rem(27px)
+            color #333
+          .iconfont
+            font-size px2rem(65px)
+            position absolute
+            right px2rem(-100px)
+            top px2rem(-95px)
+      .people-center
+        width px2rem(690px)
+        height px2rem(280px)
+        background pink
+        margin 0  px2rem(30px)  px2rem(20px)
+        display inline-block
+        display flex
+        align-items center
+        .bed
+          width px2rem(280px)
+          height px2rem(280px)
+        .little
+          width px2rem(350px)
+          height px2rem(160px)
+          background #ffa500
+          .chaodi
+            width px2rem(350px)
+            height px2rem(33px)
+            margin 0 0  px2rem(9px)
+            box-sizing border-box
+            font-size px2rem(24px)
+            white-space nowrap
+            overflow hidden
+            text-overflow ellipsis
+
+      .feng-content
+        width px2rem(750px)
+        height px2rem(354px)
+        padding 0  px2rem(10px)
+        box-sizing border-box
+        .fengshan
+          width px2rem(740px)
+          height px2rem(354px)
+          display flex
+          .fengshan-list
+            width px2rem(216px)
+            height px2rem(337px)
+            margin-left px2rem(23px)
+            box-sizing border-box
+            a
+              width px2rem(216px)
+              height px2rem(337px)
+              .xichen
+                width px2rem(216px)
+                height px2rem(216px)
+                background #ccc
+                img
+                  width px2rem(216px)
+                  height px2rem(216px)
+              .jieshao
+                width px2rem(216px)
+                height px2rem(72px)
+                //background #007aff
+                span
+                  width px2rem(200px)
+                  height px2rem(67px)
+                  display inline-block
+                  font-size px2rem(24px)
+                  color #333
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //底部
+  #footer_guid
+    position fixed
+    left 0
+    bottom 0
+    right 0
+    height px2rem(100px)
+    background #fff
+    display flex
+    z-index 100
+    .guide_item
+      width 20%
+      height px2rem(100px)
+      display flex
+      flex-direction column
+      align-items center
+      justify-content center
+      .item_icon
+        display inline-block
+        &.on
+          color red
+        .iconfont
+          font-size px2rem(60px)
+      .footers
+        font-size px2rem(30px)
+
