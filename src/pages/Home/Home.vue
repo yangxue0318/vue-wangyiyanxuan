@@ -9,7 +9,7 @@
             <img src="./imgs/logo.png" alt="">
           </a>
         </div>
-        <div class="search">
+        <div class="search" @click="go('/find')" >
           <i class="iconfont icon-xiaoxi-"></i>
           <input type="text" class="sousuo" placeholder="搜索商品，共21615款好物"/>
         </div>
@@ -559,8 +559,15 @@
 import Bscroll from 'better-scroll' 
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
+import {mapState} from 'vuex'
   export default {
+    methods:{
+      go(path){
+        this.$router.push(path)
+      }
+    },
      mounted() { 
+
             this.$nextTick(() => { 
                 this.scroll = new Bscroll('.inner-swiper',{
                   scrollX:true
@@ -576,6 +583,10 @@ import 'swiper/dist/css/swiper.min.css'
         },
         loop: true
       })
+    },
+
+    computed:{
+      ...mapState(['data'])
     }
 
 
@@ -1254,8 +1265,6 @@ import 'swiper/dist/css/swiper.min.css'
               position absolute
               left 0
               top 0
-              
-              height px2rem(361px)
               display flex
               padding 0 px2rem(30px)
               box-sizing border-box

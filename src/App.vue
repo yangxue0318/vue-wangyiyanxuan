@@ -1,7 +1,7 @@
 <template>
   <div>
     <router-view></router-view>
-     <FooterGuide/>
+     <FooterGuide v-show="$route.meta.showFooter"/>
   </div>
 </template>
 
@@ -10,6 +10,9 @@ import FooterGuide from './components/FooterGuide/FooterGuide.vue'
   export default {
     components:{
       FooterGuide
+    },
+    created(){
+      this.$store.dispatch('getHomeData')
     }
   }
 </script>
