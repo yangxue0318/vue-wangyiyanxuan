@@ -11,9 +11,7 @@ import FooterGuide from './components/FooterGuide/FooterGuide.vue'
     components:{
       FooterGuide
     },
-    created(){
-      this.$store.dispatch('getHomeData')
-    }
+   
   }
 </script>
 

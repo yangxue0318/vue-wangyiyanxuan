@@ -6,9 +6,9 @@
         <!-- 头部 -->
         <div class="sort-header">
           <div class="sort-header-top">
-            <div class="sort-search">
+            <div class="sort-search" @click="go('/find')">
              <i class="iconfont icon-xiaoxi-"></i>
-             <input type="text" class="sousuo" placeholder="搜索商品，共21615款好物"/>
+             <input type="text" class="sousuo" placeholder="搜索商品，共21615款好物" />
             </div>
           </div>
         </div>
@@ -17,41 +17,9 @@
           <div class="sort-left">
             <div class="sort-left-two">
               <ul class="sort-list">
-                <li class="sort-items lion " >
-                  <a href="#" class="onn">推荐专区</a>
-                </li>
-                 <li class="sort-items">
-                  <a href="#">推荐专区</a>
-                </li>
-                 <li class="sort-items">
-                  <a href="#">推荐专区</a>
-                </li>
-                 <li class="sort-items">
-                  <a href="#">推荐专区</a>
-                </li>
-                 <li class="sort-items">
-                  <a href="#">推荐专区</a>
-                </li>
-                 <li class="sort-items">
-                  <a href="#">推荐专区</a>
-                </li>
-                 <li class="sort-items">
-                  <a href="#">推荐专区</a>
-                </li>
-                 <li class="sort-items">
-                  <a href="#">推荐专区</a>
-                </li>
-                 <li class="sort-items">
-                  <a href="#">推荐专区</a>
-                </li>
-                 <li class="sort-items">
-                  <a href="#">推荐专区</a>
-                </li>
-                 <li class="sort-items">
-                  <a href="#">推荐专区</a>
-                </li>
-                 <li class="sort-items">
-                  <a href="#">推荐专区</a>
+                <li class="sort-items lion" v-for="(item, index) in keys.categoryL1List" :key="index">
+         
+                  <a href="#" :class="{onn:index===index1*1}" @click="aaa(index)">{{item.name}}</a>
                 </li>
               </ul>
             </div>
@@ -63,79 +31,16 @@
                   <img src="https://yanxuan.nosdn.127.net/5b4ca33a0205482398006405c1db15e8.jpg?imageView&thumbnail=0x196">
                 </div>
                 <div class="sort-right-bottom">
-                  <ul class="sort-right-list">
-                    <li class="sort-right-item">
+                  <ul class="sort-right-list"> 
+                    <li class="sort-right-item" v-for="(item, index) in objState" :key="index">
                       <div class="item-img">
-                        <img src="https://yanxuan.nosdn.127.net/c117ea2f1c4d978eb1f310d6d9ec3226.png?imageView&quality=85&thumbnail=144x144">
+                        <img :src="item.bannerUrl">
                       </div>
                       <div class="item-name">
-                        员工精选好货
+                        {{item.name}}
                       </div>
                     </li>
-                     <li class="sort-right-item">
-                      <div class="item-img">
-                        <img src="https://yanxuan.nosdn.127.net/c117ea2f1c4d978eb1f310d6d9ec3226.png?imageView&quality=85&thumbnail=144x144">
-                      </div>
-                      <div class="item-name">
-                        员工精选好货
-                      </div>
-                    </li>
-                     <li class="sort-right-item odd">
-                      <div class="item-img">
-                        <img src="https://yanxuan.nosdn.127.net/c117ea2f1c4d978eb1f310d6d9ec3226.png?imageView&quality=85&thumbnail=144x144">
-                      </div>
-                      <div class="item-name">
-                        员工精选好货
-                      </div>
-                    </li>
-                     <li class="sort-right-item">
-                      <div class="item-img">
-                        <img src="https://yanxuan.nosdn.127.net/c117ea2f1c4d978eb1f310d6d9ec3226.png?imageView&quality=85&thumbnail=144x144">
-                      </div>
-                      <div class="item-name">
-                        员工精选好货
-                      </div>
-                    </li>
-                     <li class="sort-right-item">
-                      <div class="item-img">
-                        <img src="https://yanxuan.nosdn.127.net/c117ea2f1c4d978eb1f310d6d9ec3226.png?imageView&quality=85&thumbnail=144x144">
-                      </div>
-                      <div class="item-name">
-                        员工精选好货
-                      </div>
-                    </li>
-                     <li class="sort-right-item odd">
-                      <div class="item-img">
-                        <img src="https://yanxuan.nosdn.127.net/c117ea2f1c4d978eb1f310d6d9ec3226.png?imageView&quality=85&thumbnail=144x144">
-                      </div>
-                      <div class="item-name">
-                        员工精选好货
-                      </div>
-                    </li>
-                     <li class="sort-right-item">
-                      <div class="item-img">
-                        <img src="https://yanxuan.nosdn.127.net/c117ea2f1c4d978eb1f310d6d9ec3226.png?imageView&quality=85&thumbnail=144x144">
-                      </div>
-                      <div class="item-name">
-                        员工精选好货
-                      </div>
-                    </li>
-                     <li class="sort-right-item">
-                      <div class="item-img">
-                        <img src="https://yanxuan.nosdn.127.net/c117ea2f1c4d978eb1f310d6d9ec3226.png?imageView&quality=85&thumbnail=144x144">
-                      </div>
-                      <div class="item-name">
-                        员工精选好货
-                      </div>
-                    </li>
-                     <li class="sort-right-item odd">
-                      <div class="item-img">
-                        <img src="https://yanxuan.nosdn.127.net/c117ea2f1c4d978eb1f310d6d9ec3226.png?imageView&quality=85&thumbnail=144x144">
-                      </div>
-                      <div class="item-name">
-                        员工精选好货
-                      </div>
-                    </li>
+                     
                   </ul>
                 </div>
               </div>
@@ -151,7 +56,15 @@
 
 <script type="text/ecmascript-6">
 import Bscroll from 'better-scroll'
+import { mapState } from 'vuex';
   export default {
+    data(){
+      return {
+        categor:{},
+        index1:'0',
+        objState:[]
+      }
+    },
     mounted(){
        this.$nextTick(() => { 
                 this.scroll = new Bscroll('.sort-left-two',{
@@ -163,7 +76,32 @@ import Bscroll from 'better-scroll'
 
             }) 
     
+            this.$store.dispatch('getCategorys');
+           
+     
+     },
+     watch:{
+       keys(){
+          this.objState=this.keys.categoryL1List[0].subCateList
        }
+       
+     },
+    computed:{
+      ...mapState({
+        keys:state=>state.categorys
+        
+      })
+    },
+methods:{
+  go(path){
+    this.$router.push(path)
+  },
+  aaa(n){
+    this.index1=n;
+    this.objState=this.keys.categoryL1List[n].subCateList
+  }
+}
+      
   }
 </script>
 
@@ -233,7 +171,6 @@ import Bscroll from 'better-scroll'
              top 0
              .sort-items
                 width px2rem(162px)
-                height px2rem(50px)
                 margin-top px2rem(40px)
                 &.lion 
                   margin-top 0
@@ -279,11 +216,16 @@ import Bscroll from 'better-scroll'
                     width px2rem(144px)
                     height px2rem(216px)
                     margin-right px2rem(34px)
+                    &:nth-child(3n)
+                      margin-right 0
                     &.odd
                        margin-right 0
                     .item-img
                       width px2rem(144px)
                       height px2rem(144px)
+                      img
+                        width px2rem(144px)
+                        height px2rem(144px)
                     .item-name
                       width px2rem(144px)
                       height px2rem(72px)

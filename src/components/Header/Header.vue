@@ -73,25 +73,25 @@
       position absolute
       top 0
       right px2rem(64px)
-		.jing
-			width px2rem(64px)
-			height px2rem(28px)
-			display inline-block
-			position absolute
-			right px2rem(25px)
-			top 0
-			margin-right px2rem(40px)
-			.iconfont 
-				font-size px2rem(78px)
-		.cart
-			width px2rem(64px)
-			height px2rem(64px)
-			display inline-block
-			top 0
-			right px2rem(5px)
-			position absolute
-			.iconfont 
-				 font-size px2rem(78px)
+			.jing
+				width px2rem(64px)
+				height px2rem(28px)
+				display inline-block
+				position absolute
+				right px2rem(25px)
+				top 0
+				margin-right px2rem(40px)
+				.iconfont 
+					font-size px2rem(78px)
+			.cart
+				width px2rem(64px)
+				height px2rem(64px)
+				display inline-block
+				top 0
+				right px2rem(5px)
+				position absolute
+				.iconfont 
+					font-size px2rem(78px)
 </style>
 		
      

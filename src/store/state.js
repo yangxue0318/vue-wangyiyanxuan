@@ -1,4 +1,10 @@
 //定义state模块
 export default{
-    data:{}
+    data:{},
+    value:{},
+    shops:{},
+    categorys:{},
+    shiwu:[],
+    common:{},
+    picture:[]
 }

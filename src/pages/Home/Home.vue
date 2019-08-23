@@ -119,72 +119,7 @@
 
   <section class="shop">
     <!--货物-->
-    <div class="goods">
-      <ul class="goodsList">
-        <li class="goods-item">
-          <a class="goodss">
-            <img src="https://yanxuan.nosdn.127.net/5243a7191dd4c86b3b28859089273aa8.gif">
-            <span>新品首发</span>
-          </a>
-        </li>
-        <li class="goods-item">
-          <a class="goodss">
-            <img src="https://yanxuan.nosdn.127.net/fede8b110c502ec5799702d5ec824792.png">
-            <span>新品首发</span>
-          </a>
-        </li>
-        <li class="goods-item">
-          <a class="goodss">
-            <img src="https://yanxuan.nosdn.127.net/2415a74cea7d3f080c2dcaa791884572.png">
-            <span>新品首发</span>
-          </a>
-        </li>
-        <li class="goods-item">
-          <a class="goodss">
-            <img src="https://yanxuan.nosdn.127.net/d916591adea776351e084016335e5820.png">
-            <span>新品首发</span>
-          </a>
-        </li>
-        <li class="goods-item">
-          <a class="goodss">
-            <img src="https://yanxuan.nosdn.127.net/6c3bd9d885c818b1f73e497335a68b47.png">
-            <span>新品首发</span>
-          </a>
-        </li>
-
-
-        <li class="goods-item">
-          <a class="goodss">
-            <img src="https://yanxuan.nosdn.127.net/559d2a240ec20b096590a902217009ff.png">
-            <span>新品首发</span>
-          </a>
-        </li>
-        <li class="goods-item">
-          <a class="goodss">
-            <img src="https://yanxuan.nosdn.127.net/5c088559ebcc3f0ffcda663f04dfbeb2.png">
-            <span>新品首发</span>
-          </a>
-        </li>
-        <li class="goods-item">
-          <a class="goodss">
-            <img src="https://yanxuan.nosdn.127.net/fbca8e1f2948f0c09fc7672c2c125384.png">
-            <span>新品首发</span>
-          </a>
-        </li>
-        <li class="goods-item">
-          <a class="goodss">
-            <img src="https://yanxuan.nosdn.127.net/f7281169d4e82d5d8d52aa1fec83fe01.png">
-            <span>新品首发</span>
-          </a>
-        </li>
-        <li class="goods-item">
-          <a class="goodss">
-            <img src="https://yanxuan.nosdn.127.net/3954c3cbeb4359dd7007be7a076e0dda.gif">
-            <span>新品首发</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+    <kingKongModule :goodss="goodsArr"></kingKongModule>
     <!--新人专享礼-->
     <div class="nrepeople">
       <div class="new-top">
@@ -560,7 +495,20 @@ import Bscroll from 'better-scroll'
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
 import {mapState} from 'vuex'
+import kingKongModule from '../../components/kingKongModule/kingKongModule.vue'
   export default {
+    components:{
+      kingKongModule
+    },
+    data(){
+      return {
+        goodsArr:[]
+      }
+    },
+     created(){
+      this.$store.dispatch('getHomeData')
+     
+    },
     methods:{
       go(path){
         this.$router.push(path)
@@ -586,7 +534,14 @@ import {mapState} from 'vuex'
     },
 
     computed:{
-      ...mapState(['data'])
+      ...mapState({
+        goodss:state=>state.data
+      })
+    },
+    watch:{
+      goodss(){
+        this.goodsArr=this.goodss.kingKongModule.kingKongList
+      }
     }
 
 
@@ -596,6 +551,7 @@ import {mapState} from 'vuex'
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
+
 @import '../../common/stylus/mixins.styl'
 #nav
   height px2rem(148px)
@@ -733,33 +689,11 @@ import {mapState} from 'vuex'
   width 100%
   //height 100%
   background #ccc
-  .goods
-    width 100%
-    height px2rem(370px)
-    background white
-    .goodsList
-      width 100%
-      height px2rem(370px)
-      display flex
-      flex-wrap wrap
-      .goods-item
-        width px2rem(110px)
-        height px2rem(156px)
-        margin px2rem(10px) px2rem(20px) px2rem(9px)
-        .goodss
-          width px2rem(110px)
-          height px2rem(156px)
-          display inline-block
-          img
-            width px2rem(110px)
-            height px2rem(110px)
-          span
-            font-size px2rem(24px)
-            margin px2rem(10px) 0 0
-            width px2rem(110px)
-            height px2rem(36px)
-            display inline-block
-            color #333
+  
+    
+      
+        
+         
 
   .nrepeople
     width 100%

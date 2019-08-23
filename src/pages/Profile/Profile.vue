@@ -8,12 +8,14 @@
             <img src="http://yanxuan.nosdn.127.net/bd139d2c42205f749cd4ab78fa3d6c60.png">
           </div>
            <div class="pre-bottom"> 
-            <div class="bottom-top" @click="go('/login')">
+            <div class="bottom-top" @click="go">
              <i class=""></i>
+             <!-- <input type="text" placeholder="手机号快捷登录" v-model="phone"/> -->
               <span>手机号快捷登录</span>
           </div>
-           <div class="bottom-top right">
+           <div class="bottom-bottom right" @click="gos">
              <i class=""></i>
+             <!-- <input type="text" placeholder="邮箱账号登录"> -->
               <span>邮箱账号登录</span>
           </div>
         </div>
@@ -48,14 +50,35 @@
  import Header from '../../components/Header/Header'
  
   export default {
+    data(){
+      return {
+        phone:''
+      }
+    },
+    watch:{
+      phone(value){
+        var reg = /^1[3456789]\d{9}$/
+        if(phone!=reg){
+          console.log('输入不合法')
+        }
+      }
+    },
+    
     components:{
       Header
     },
     methods:{
-      go(path){
-        this.$router.push(path)
-      }
+      go(){
+        this.$router.push('/login/1')
+
+    },
+    gos(){
+        this.$router.push('/login/2')
+
     }
+    },
+   
+    
 
     // data:{
     //   isShowPhone:true,
@@ -106,6 +129,12 @@
       flex-wrap wrap
       text-align center
       .bottom-top
+        width px2rem(640px)
+        height px2rem(94px)
+        margin 0 0 px2rem(32px)
+        background red
+        line-height px2rem(94px)
+      .bottom-bottom
         width px2rem(640px)
         height px2rem(94px)
         margin 0 0 px2rem(32px)
