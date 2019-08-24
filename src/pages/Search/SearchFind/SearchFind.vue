@@ -188,9 +188,10 @@
 import Swiper  from 'swiper'
 import 'swiper/dist/css/swiper.min.css'
 import Common from './Common.vue'
-import { mapState } from 'vuex';
+import { mapState } from 'vuex'
+import BScroll from 'better-scroll' 
   export default {
-    
+  
     components:{
       Common
     },
@@ -215,10 +216,15 @@ import { mapState } from 'vuex';
               });
           });
       this.$store.dispatch('getPictures')
+      this.$store.dispatch('getManyPhotos',{value2:1,number:5})
        },
        computed:{
          ...mapState({
            photo:state=>state.picture
+         }),
+         ...mapState({
+           loding:state=>state.value,
+          //  loding2:state=>state.number
          })
        }
   }

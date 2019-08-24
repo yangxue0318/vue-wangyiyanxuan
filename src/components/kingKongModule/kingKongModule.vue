@@ -4,7 +4,7 @@
       <ul class="goodsList">
         <li class="goods-item" v-for="(item, index) in goodss" :key="index">
           <a class="goodss">
-            <img :src="item.picUrl">
+            <img :src="item.picUrl" v-lazy="item.picUrl">
             <span>{{item.text}}</span>
           </a>
         </li>

@@ -5,7 +5,8 @@ import {RECEIVE_HOMEDATA,
     RECEIVE_CATEGORYS,
     RECEIVE_SHIWU,
     RECTIVE_COMMONS,
-    RECTIVE_PICTURES
+    RECTIVE_PICTURES,
+    RECTIVE_MANYPICTURE
 } from './mutations-types'
 export default{
     [RECEIVE_HOMEDATA](state,{kingKongList}){
@@ -33,5 +34,10 @@ export default{
     //图片
     [RECTIVE_PICTURES](state,photos){
         state.picture=photos
+    },
+    //上拉加载接口
+    [RECTIVE_MANYPICTURE](state,{first}){
+        state.value=first
+        
     }
 }

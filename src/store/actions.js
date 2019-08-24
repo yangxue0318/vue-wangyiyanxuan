@@ -1,6 +1,6 @@
 //vuex中的action模块、
 //
-import {reqHomeData,reqSearch,reqHot,reqCategorys,reqShiWu,reqCommons,reqTuijian} from '../api'
+import {reqHomeData,reqSearch,reqHot,reqCategorys,reqShiWu,reqCommons,reqTuijian,reqLoding} from '../api'
 import {
     RECEIVE_HOMEDATA,
     RECEIVE_SEARCH,
@@ -8,7 +8,8 @@ import {
     RECEIVE_CATEGORYS,
     RECEIVE_SHIWU,
     RECTIVE_COMMONS,
-    RECTIVE_PICTURES
+    RECTIVE_PICTURES,
+    RECTIVE_MANYPICTURE
 } from './mutations-types'
 export default {
     //异步获取商品导航
@@ -51,5 +52,12 @@ export default {
         const result=await reqTuijian()
         const photos=result.data
         commit(RECTIVE_PICTURES,photos)
+    },
+    //异步实现上拉加载
+    async getManyPhotos({commit},{value2,number}){
+        const result=await reqLoding(value2,number)
+        const manyPhotos=result.data
+       
+        commit(RECTIVE_MANYPICTURE,{first:manyPhotos})
     }
 }

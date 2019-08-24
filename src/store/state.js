@@ -6,5 +6,7 @@ export default{
     categorys:{},
     shiwu:[],
     common:{},
-    picture:[]
+    picture:[],
+    value:{},
+  
 }

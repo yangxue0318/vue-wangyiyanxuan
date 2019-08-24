@@ -8,3 +8,5 @@ export const RECEIVE_SHIWU='receive_shiwu'
 export const RECTIVE_COMMONS='receive_commons'
 
 export const RECTIVE_PICTURES="receive_pictures"
+
+export const RECTIVE_MANYPICTURE="receive_manypicture"

@@ -44,3 +44,13 @@ export const reqCommons =()=>ajax({
 export const reqTuijian=()=>ajax({
     url:BASE+'/topic/v1/find/recManual.json'
 })
+
+//发现页上拉加载
+export const reqLoding=(value2,number)=>ajax({
+url:BASE+'topic/v1/find/recAuto.json?',
+params:{
+    page:value2,
+    size:number
+}
+
+})
